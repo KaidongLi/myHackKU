@@ -3,13 +3,15 @@ var http = require('http').Server(app);
 var bodyParser = require('body-parser');
 var date = new Date();
 
+var path=process.cwd();
+
 app.use(bodyParser.json());
 
 app.get('/',function(req,res){
     console.log(req.url);
-    res.send('server on');
-    res.end();
+    res.sendFile(path+'/views/main.html');
 })
+
 
 http.listen(8080, function(){
   console.log('listening on :' + 8080);
