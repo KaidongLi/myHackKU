@@ -12,7 +12,7 @@ app.use(express.static("views"));
 app.get('/',function(req,res){
     console.log(req.url);
     console.log("hahahha");
-    res.sendFile('/views/main.html', {root: __dirname });
+    res.sendFile(path+'/views/loginPage.html');
 })
 
 app.get('/home',function(req,res){
@@ -25,6 +25,10 @@ app.get('/entry',function(req,res){
     console.log(req.url);
     console.log("hahahha");
     res.sendFile('/views/main.html', {root: __dirname });
+
+app.get('/search',function(req,res){
+    console.log(req.url);
+    res.sendFile(path+'/views/search.html');
 })
 
 http.listen(8080, function(){
