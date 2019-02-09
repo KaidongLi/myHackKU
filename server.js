@@ -17,6 +17,10 @@ app.get('/home',function(req,res){
     res.sendFile(path+'/views/loginPage.html');
 })
 
+app.get('/search',function(req,res){
+    console.log(req.url);
+    res.sendFile(path+'/views/search.html');
+})
 
 http.listen(8080, function(){
   console.log('listening on :' + 8080);
