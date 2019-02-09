@@ -12,6 +12,11 @@ app.get('/',function(req,res){
     res.sendFile(path+'/views/main.html');
 })
 
+app.get('/home',function(req,res){
+    console.log(req.url);
+    res.sendFile(path+'/views/loginPage.html');
+})
+
 
 http.listen(8080, function(){
   console.log('listening on :' + 8080);
