@@ -9,10 +9,14 @@ var path=process.cwd();
 app.use(bodyParser.json());
 app.use(express.static("views/public"));
 
+app.get('/',function(req,res){
+    console.log(req.url);
+    res.sendFile(path+'/views/start.html');
+})
+
 app.get('/goHome',function(req,res){
     console.log(req.url);
-    console.log("home");
-    res.sendFile(path+'/views/public/index.html');
+    res.sendFile(path+'/views/public/home.html');
 })
 
 app.get('/login',function(req,res){
@@ -22,7 +26,7 @@ app.get('/login',function(req,res){
 
 app.get('/entry',function(req,res){
     console.log(req.url);
-    res.sendFile(path+'/views/main.html');
+    res.sendFile(path+'/views/start.html');
 })
 
 app.get('/search',function(req,res){
