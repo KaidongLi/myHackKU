@@ -34,6 +34,11 @@ app.get('/search',function(req,res){
     res.sendFile(path+'/views/search.html');
 })
 
+app.get('/searchSuccess',function(req,res){
+    console.log(req.url);
+    res.sendFile(path+'/views/resultPage.html');
+})
+
 http.listen(8080, function(){
   console.log('listening on :' + 8080);
 })
