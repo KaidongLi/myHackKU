@@ -32,8 +32,26 @@ body {
 	line-height: 1;
 }
 
+.one-activity {
+  border: 2px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #5bc236;
+  display:inline-block;
+
+}
+
 ol, ul {
 	list-style: none;
+}
+
+div.activity{
+	background-color: #FFF;
+	border-radius: 10px;
+	max-height: 200px;
+	padding: 5px;
+	overflow: scroll;
 }
 
 blockquote, q {
@@ -172,6 +190,15 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2em 0;
+	}
+
+	.middle{
+		margin: 5px;
+	}
+
+	.close{
+		margin: 1px;
+		color: #FFF;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
